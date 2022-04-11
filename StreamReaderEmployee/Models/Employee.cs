@@ -32,7 +32,8 @@ namespace StreamReaderEmployee.Models
 
         public void ShowInfo()
         {
-            Console.WriteLine("");
+            Console.WriteLine($"Worker name: {Name}\n" +
+                $"Salary: {Salary}\n");
         }
     }
 }

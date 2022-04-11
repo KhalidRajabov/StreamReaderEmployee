@@ -11,7 +11,7 @@ namespace StreamReaderEmployee.Models
     {
         private int _id;
         public string Name { get; set; }
-        public List <Employee>  Employees = new List<Employee>();
+        public List <Employee>  Worker = new List<Employee>();
         public int Id
         {
             get { return _id; }
@@ -19,8 +19,18 @@ namespace StreamReaderEmployee.Models
             set { _id = value; }
 
         }
+        public Department()
+        {
+
+        }
+        public Department(string name)
+        {
+            Name = name;
+            Id++;
+        }
         public void AddEmployee(Employee objct)
         {
+
         }
         public void GetEmployeesById(Employee id)
         {
