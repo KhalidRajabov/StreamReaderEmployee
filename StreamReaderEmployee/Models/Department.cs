@@ -32,11 +32,29 @@ namespace StreamReaderEmployee.Models
         {
             Worker.Add(objct);
         }
-        public void GetEmployeesById(Employee id)
+        public void GetEmployeesById(Employee? id)
         {
+
+            foreach (var item in Worker)
+            {
+                if (item==id)
+                {
+                    item.ShowInfo();
+                }
+            }
+            
         }
         public void RemoveEmployee(Employee id)
         {
+            foreach (var item in Worker)
+            {
+                if (item == id)
+                {
+                    Worker.Remove(item);
+                }
+                
+            }
+            
         }
         public void ShowDepWorkers()
         {
