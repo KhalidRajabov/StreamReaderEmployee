@@ -1,32 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StreamReaderEmployee.Models
 {
     internal class Employee
     {
-        private static int _id=0;
+        private int _id;
+        public int Id
+        {
+            get
+            {
+                return _id;
+            }
+        }
         public string Name { get; set; }
         public double Salary { get; set; }
-        public int Id {
-            get;
-        }
+        private static int _count;
 
         public Employee()
         {
-
-            Id += _id;
+            _count++;
+            _id += _count;
 
         }
 
-        public Employee(string name, double salary)
-        {
-            Name = name;
-            Salary = salary;
-        }
 
         public void ShowInfo()
         {
