@@ -30,13 +30,22 @@ namespace StreamReaderEmployee.Models
         }
         public void AddEmployee(Employee objct)
         {
-
+            Worker.Add(objct);
         }
         public void GetEmployeesById(Employee id)
         {
         }
         public void RemoveEmployee(Employee id)
         {
+        }
+        public void ShowDepWorkers()
+        {
+            foreach (var item in Worker)
+            {
+                Console.WriteLine(item.Name);
+                Console.WriteLine(item.Salary);
+                Console.WriteLine(item.Id);
+            }
         }
     }
 }

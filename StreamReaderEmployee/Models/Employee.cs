@@ -8,18 +8,17 @@ namespace StreamReaderEmployee.Models
 {
     internal class Employee
     {
-        private int _id = 0;
+        private static int _id=0;
         public string Name { get; set; }
         public double Salary { get; set; }
         public int Id {
-            get { return _id; }
-                
-            set { _id = value; }
-
-                }
+            get;
+        }
 
         public Employee()
         {
+
+            Id += _id;
 
         }
 
@@ -27,13 +26,13 @@ namespace StreamReaderEmployee.Models
         {
             Name = name;
             Salary = salary;
-            Id++;
         }
 
         public void ShowInfo()
         {
             Console.WriteLine($"Worker name: {Name}\n" +
-                $"Salary: {Salary}\n");
+                $"Salary: {Salary}\n" +
+                $"Worker ID: {_id}");
         }
     }
 }

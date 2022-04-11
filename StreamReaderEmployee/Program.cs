@@ -18,6 +18,9 @@ namespace StreamReaderEmployee
             Department department = new Department();
             department.Name = "Devolopers";
             department.AddEmployee(emp1);
+            department.AddEmployee(emp2);
+
+            department.ShowDepWorkers();
         }
     }
 }
